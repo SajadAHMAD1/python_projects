@@ -1,6 +1,6 @@
 
 """
-Program: To find the index of the minimum value of the element in the list
+Program: To find the index of the minimum value in the list
 Programmer: Dr. Sajad Ahmad Rather
 """
 #Sample_example = [400,45,20,33,22]
