@@ -1,6 +1,6 @@
 
 """
-Program: To find the index of the minimum value of the element in the list
+Program: To find the index of the minimum value in a list
 Programmer: Dr. Sajad Ahmad Rather
 """
 
