@@ -4,7 +4,7 @@
                                     #### Python Project 6: Tic-Tac-Toe Game ####
 #Programmer: Dr. Sajad Ahmad Rather
 #Language: Python
-#Dated: 10th June 2023
+#Dated: 13th June 2023
 
 from random import randint
 import time
