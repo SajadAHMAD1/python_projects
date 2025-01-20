@@ -1,0 +1,82 @@
+
+
+""" >>> Project-1: Caculator Project <<< """
+
+
+
+### Programmer: Prof. Sajad Ahmad Rather ###
+
+# Dated: 20-01-2025
+# Day: Monday
+# Time: 7:15 PM
+# Place: PARIMAL LAB, IIT Roorkee 
+
+
+""" This program deals with addition, subtraction, multiplication, and division operations of the calculator """
+
+
+
+class Calculator:
+
+    def __init__(self, x,y):
+        self.x =x
+        self.y =y
+
+    #Addition function
+    def addition(self):
+        print(f'Sum: {self.x + self.y}')
+
+
+    #Subtraction function
+    def subtraction(self):
+        print(f'Difference: {self.x - self.y}')
+
+
+    #Multiplication function
+    def multiplication(self):
+        print(f'Product: {self.x * self.y}')
+
+
+    #Division function
+    def division(self):
+        print(f'Division: {(self.x/self.y):.2f}')
+
+
+#Output of the program
+
+x = int(input('Enter first number: '))
+y = int(input('Enter second number: '))
+
+print('------------------------------')
+
+output = Calculator(x,y)
+
+output.addition()
+output.subtraction()
+output.multiplication()
+output.division()
+
+print('------------------------------')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
