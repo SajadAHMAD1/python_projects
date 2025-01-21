@@ -1,0 +1,35 @@
+# >>> Project-2: Factorial Project <<< #
+
+
+
+### Programmer: Prof. Sajad Ahmad Rather ###
+
+# Dated: 21-01-2025
+# Day: Tuesday
+# Time: 10:57 AM
+# Place: PARIMAL LAB, IIT Roorkee
+
+
+# ***This program finds the factorial of a number *** #
+
+
+#Factorial Function
+def factorial(n):
+
+    temp = 1
+    for i in range(1,n+1):
+        temp = temp * i
+
+    print(f'Factorial: {temp}')
+
+
+
+p = int(input('Enter number: '))
+
+if p > 0:
+    output = factorial(p)
+
+else:
+    print(f'No Factorial ---> Number is less than zero')
+
+
