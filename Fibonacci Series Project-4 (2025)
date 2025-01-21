@@ -1,0 +1,58 @@
+
+# >>> Project-3: Fibonacci Series Project <<< #
+
+
+
+### Programmer: Prof. Sajad Ahmad Rather ###
+
+# Dated: 21-01-2025
+# Day: Tuesday
+# Time: 11:41 AM
+# Place: PARIMAL LAB, IIT Roorkee
+
+
+# ***This program generates the Fibonacci series upto a given number *** #
+
+#Factorial Function
+def fibonacci(n):
+
+    series = []
+
+    for i in range(n):
+        if i == 0:
+            series.append(i)
+
+        if i == 1:
+            series.append(i)
+
+        if i > 1:
+            temp = series[i-2] + series[i-1]
+            series.append(temp)
+
+    print(f'Fibonacci series: {series}')
+
+
+#Program output
+n = int(input('Enter the number of terms you want to generate: '))
+output = fibonacci(n)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
