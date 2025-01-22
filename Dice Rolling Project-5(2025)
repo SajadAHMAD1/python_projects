@@ -1,0 +1,44 @@
+
+
+# >>> Project-5: Dice Rolling Project <<< #
+
+
+
+### Programmer: Prof. Sajad Ahmad Rather ###
+
+# Dated: 22-01-2025
+# Day: Wednesday
+# Time: 12:42 PM
+# Place: PARIMAL LAB, IIT Roorkee
+
+
+# ***This program rolls the dice until player wishes to play!!! *** #
+
+from random import randint, choice
+from time import sleep
+
+def roll_dice():
+
+
+    times = 1
+
+    for i in range(times):
+        temp = randint(1, 6)
+        print(f'Dice value: {temp}')
+        sleep(1)
+
+
+# Program output
+
+while True:
+
+    print(f'-------Roll Dice-------')
+    roll_dice()
+
+    play_again = input('Do yo want to play again (y/n): ')
+    if play_again =='y':
+        roll_dice()
+
+    else:
+        print(f'-------Game Over-------')
+        break
