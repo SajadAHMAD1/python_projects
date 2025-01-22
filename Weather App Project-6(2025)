@@ -1,0 +1,89 @@
+
+
+# >>> Project-6: Weather App Project <<< #
+
+
+
+### Programmer: Prof. Sajad Ahmad Rather ###
+
+# Dated: 22-01-2025
+# Day: Wednesday
+# Time: 2:38 PM
+# Place: PARIMAL LAB, IIT Roorkee
+
+
+# ***This program generates the password of given length *** #
+
+from random import choice
+
+
+def weather(cities):
+
+
+    cities = ['Delhi', 'Srinagar', 'Kerala', 'Punjab', 'Mumbai']
+    temp_data = ['humid', 'rainy', 'sunny']
+
+    # random_temp = choice(temp_data)
+    random_data = choice(temp_data)
+
+    for i in cities:
+
+        if i == 'Delhi':
+            print(f'Temperature: {random_data}')
+            break
+
+        elif i == 'Srinagar':
+            print(f'Temperature: {random_data}')
+            break
+
+        elif i == 'Kerala':
+            print(f'Temperature: {random_data}')
+            break
+
+        elif i == 'Punjab':
+            print(f'Temperature: {random_data}')
+            break
+
+        else:
+            print(f'Temperature: {random_data}')
+            break
+
+print("List of cities: {'Delhi', 'Srinagar', 'Kerala', 'Punjab', 'Mumbai'}")
+
+cities = ['Delhi', 'Srinagar', 'Kerala', 'Punjab', 'Mumbai']
+
+city = input('Enter the city: ').title()
+if city in cities:
+    output = weather(city)
+else:
+    print('Not in the list of cities')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
