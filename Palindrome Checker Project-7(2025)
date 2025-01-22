@@ -1,0 +1,38 @@
+
+
+# >>> Project-7: Palindrome Checker Project <<< #
+
+
+
+### Programmer: Prof. Sajad Ahmad Rather ###
+
+# Dated: 22-01-2025
+# Day: Wednesday
+# Time: 3:31 PM
+# Place: PARIMAL LAB, IIT Roorkee
+
+
+# ***This program generates the password of given length *** #
+
+
+def palindrome(input):
+
+    temp = list(input)
+    temp.reverse()
+    # print(temp)
+
+    joined_input = "".join(temp)
+    # print(joined_input)
+    # print(type(joined_input ))
+
+    if input == joined_input:
+        print('Palindrome')
+
+    else:
+        print('Not plaindrome')
+
+
+input = input('Enter any number or string: ')
+output = palindrome(input)
+
+
