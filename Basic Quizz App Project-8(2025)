@@ -1,0 +1,95 @@
+
+
+# >>> Project-8: Basic Quizz App Project <<< #
+
+
+
+### Programmer: Prof. Sajad Ahmad Rather ###
+
+# Dated: 23-01-2025
+# Day: Thursday
+# Time: 12:11 PM
+# Place: PARIMAL LAB, IIT Roorkee
+
+
+# ***This program provides questions to the user, gets his answers, and then scores them accordingly *** #
+
+def quizz(question_data, options_q1, options_q2, options_q3):
+
+    correct_answers = ['Srinagar', 'Salahudeen', 'Quran']
+    score = 0
+
+    for i in question_data:
+
+        # Question 1 logic
+        if i == question_data[0]:
+            print(i)
+            # print(f'\n')
+            for j in options_q1:
+                print(f'---{j}')
+
+            answer_q1 = input('Your answer is: ')
+            if answer_q1 == correct_answers[0]:
+                print(f'Correct answer....Bravooooo')
+                score = score + 1
+                print(f'Score: {score}')
+                print(f'\n')
+            else:
+                print(f'Wrong answer....Nooooop')
+                score = score - 1
+                print(f'Score: {score}')
+                print(f'\n')
+
+        # Question 2 logic
+        if i == question_data[1]:
+            print(i)
+            # print(f'\n')
+            for j in options_q2:
+                print(f'---{j}')
+
+            answer_q2 = input('Your answer is: ')
+            if answer_q2 == correct_answers[1]:
+                print(f'Correct answer....Bravooooo')
+                score = score + 1
+                print(f'Score: {score}')
+                print(f'\n')
+            else:
+                print(f'Wrong answer....Nooooop')
+                score = score - 1
+                print(f'Score: {score}')
+                print(f'\n')
+
+        # Question 3 logic
+        if i == question_data[2]:
+            print(i)
+            # print(f'\n')
+            for j in options_q3:
+                print(f'---{j}')
+
+            answer_q3 = input('Your answer is: ')
+            if answer_q3 == correct_answers[2]:
+                print(f'Correct answer....Bravooooo')
+                score = score + 1
+                print(f'Score: {score}')
+                print(f'\n')
+            else:
+                print(f'Wrong answer....Nooooop')
+                score = score - 1
+                print(f'Score: {score}')
+                print(f'\n')
+
+    # print('{result}')
+
+
+
+
+if __name__ == "__main__":
+
+    question_data = ['Which is the capital of kashmir valley: ', 'Who conquered Jerusalem from crusaders: ', 'Holy book of islam is: ']
+    options_q1 = ['Baramulla', 'Budgam', 'Srinagar', 'Islamabad']
+    options_q2 = ['Salahudeen', 'Khalid', 'Sikandar' , 'Osman']
+    options_q3 = ['Quran', 'Bible', 'Torah', 'Injeel']
+
+
+    output = quizz(question_data, options_q1, options_q2, options_q3)
+
