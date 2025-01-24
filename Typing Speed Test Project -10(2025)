@@ -1,0 +1,136 @@
+
+
+# >>> Project-10: Typing Speed Test Project <<< #
+
+
+
+### Programmer: Prof. Sajad Ahmad Rather ###
+
+# Dated: 24-01-2025
+# Day: Friday
+# Time: 8:57 PM
+# Place: PARIMAL LAB, IIT Roorkee
+
+
+# ***A Typing Speed Test Project is a python program that measures how quickly a user can type a given sentence.
+# It calculates the speed in words per minute (WPM) and
+# provides feedback on accuracy by comparing the typed sentence to the original. *** #
+
+
+import time
+from datetime import datetime
+from random import choice
+
+
+def typing_speed(sentences, random_sentence):
+
+    split_words = random_sentence.split()
+    print(random_sentence)
+
+    start = datetime.now()
+
+
+    user_response = " "
+    response = True
+    while response:
+        user_response = input('Write the above sentence: ')
+        response ='\n'
+        if response:
+            break
+
+    end = datetime.now()
+    elapsed_time = end - start
+
+
+    print('---------------------------------------------------')
+
+
+    #Time Calculation (in seconds)
+    print(f"Time taken: {elapsed_time.total_seconds():.2f} Seconds")
+
+
+    #Speed Calculation (per minute)
+    elapsed_time_minutes = (elapsed_time.total_seconds()) / 60
+    # print(f"Minutes: {elapsed_time_minutes:.2f}")
+
+    typing_speed = len(split_words)/elapsed_time_minutes
+    print(f'Speed (WPM): {typing_speed:.2f}')
+
+
+    #Word Accuracy Calculation
+    # print(user_response)
+
+
+    #Case-I: If length of the user response is equal to the length of input sentence
+    split_user_words = user_response.split()
+    # print(split_user_words)
+
+    total = len(split_words)
+    correct_words = 0
+
+    if len(split_user_words) == len(split_words):
+
+        print('Equal case')
+        for i in range(len(split_words)):
+            if split_user_words[i]  ==  split_words[i]:
+                correct_words = correct_words + 1
+                # print(correct_words)
+
+        accuracy = (correct_words / total) * 100
+        print(f'Accuracy: {int(accuracy)} %')
+
+
+    #Case-II: If length of the user response is less than the length of input sentence
+
+    if len(split_user_words) < len(split_words):
+        print('Less than case')
+        for i in range(len(split_user_words)):
+            if split_user_words[i] == split_words[i]:
+                correct_words = correct_words + 1
+
+                # print(correct_words)
+
+        accuracy = (correct_words / total) * 100
+        print(f'Accuracy: {int(accuracy)} %')
+
+    #Case-III: If length of the user response is greater than the length of input sentence
+    # print(f'Input word length: {len(split_words)}')
+    # print(f'Input word length: {len(split_user_words)}')
+    # minus_score_of_additional_words = len(split_user_words) - len(split_words)
+
+    if len(split_user_words) > len(split_words):
+        # print(f'Input word length: {len(split_words)}')
+        # print(f'Input word length: {len(split_user_words)}')
+
+        minus_score_of_additional_words = len(split_user_words) - len(split_words)
+        # print(f'Additional words: {minus_score_of_additional_words }')
+        print('Greater than case')
+        for i in range(len(split_words)):
+            if split_user_words[i] == split_words[i]:
+                correct_words = correct_words + 1
+
+                print(correct_words)
+
+        print(f'Added user input: {split_user_words}')
+
+        accuracy = ((correct_words - minus_score_of_additional_words) / total) * 100
+        print(f'Accuracy: {int(accuracy)} %')
+
+
+
+    print('---------------------------------------------------')
+
+
+if __name__ == "__main__":
+
+    sentences = ['Allah(SWT) is most high', 'You are awesome', 'Life is great',
+                 'Islam is the right path and the only way to enter paradise, whether you accept it or not']
+    random_sentence = choice(sentences)
+
+    output = typing_speed(sentences, random_sentence)
+
+
+
+
+
+
