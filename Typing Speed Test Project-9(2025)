@@ -1,0 +1,72 @@
+
+
+# >>> Project-9: Countdown Timer Project <<< #
+
+
+
+### Programmer: Prof. Sajad Ahmad Rather ###
+
+# Dated: 24-01-2025
+# Day: Friday
+# Time: 12:55 PM
+# Place: PARIMAL LAB, IIT Roorkee
+
+
+# ***A Countdown Timer is a simple program that starts from a specified time (in seconds or minutes) and
+# counts down to zero, displaying the remaining time at each step (after every 5 seconds).
+# When the countdown reaches zero, it displays a message like "Time's up!" (or/and) plays an alert sound. *** #
+
+
+from time import sleep
+from playsound import playsound
+
+def countdown_timer(input_time):
+
+    p = range(input_time)
+    length = len(p)
+    time_remaining = length
+
+    input =  print(f'Write about yourself in {input_time} seconds: ')
+
+    j = []
+    for i in p:
+
+        sleep(3)  # Create some delay in the output
+
+        j.append(i)
+        if len(j) <= len(p):
+            time_remaining = time_remaining - 1
+
+            if (time_remaining % 5) == 0:  # You can change it to different time here
+                print(f'\nTime remaining: {time_remaining} seconds')
+
+        #Displays a message
+        if time_remaining == 0:
+            print('---------------')
+
+            print("Time's up!!!")
+
+            print('---------------')
+
+        #Plays an alert sound
+        if time_remaining == 0:
+            print('---------------')
+
+            print(f"Time's up!!!")
+
+            print('---------------')
+
+            playsound("sound.mp3")
+
+
+
+
+#Program output
+
+if __name__ == "__main__":
+
+    input_time = int(input('Enter the time in seconds: '))
+    output = countdown_timer(input_time )
+
+
+
