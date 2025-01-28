@@ -1,0 +1,51 @@
+
+
+
+# >>> Project-13: Image Manipulation Project<<< #
+
+
+
+### Programmer: Prof. Sajad Ahmad Rather ###
+
+# Dated: 28-01-2025
+# Day: Tuesday
+# Time: 11:57 AM
+# Place: PARIMAL LAB, IIT Roorkee
+
+
+# *** Load a grayscale image as a NumPy array, modify its brightness, and save the modified image *** #
+
+
+
+from PIL import Image
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+def image_processing(image):
+
+
+
+    image_array = np.array(image)
+    # print(image_array)
+
+    # Adjust brightness by adding 50 to all pixel values
+    brightness_adjustment = 50
+    modified_array = np.clip(image_array + brightness_adjustment, 0, 255)
+
+    # Convert the modified array back to an image
+    modified_image = Image.fromarray(modified_array.astype(np.uint8))
+    print(np.array(modified_image))
+
+
+    modified_image.show()
+
+
+
+#Program output
+# Open the image and convert to a NumPy array
+image = Image.open('pizza.jpg').convert("L")  # "L" mode ensures grayscale
+
+image.show()
+
+output = image_processing(image)
