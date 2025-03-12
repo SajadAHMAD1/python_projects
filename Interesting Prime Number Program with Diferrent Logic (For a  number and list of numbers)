@@ -1,0 +1,64 @@
+
+
+
+
+#Dated: 12-03-2025 (Wednesday)
+#Programmer: Prof. Sajad Ahmad Rather
+
+
+
+
+#For a particular number, Is it Prime or not
+
+def prime(num):
+
+    s = 0
+    temp = 10_00_000
+
+    for i in range(2,temp):
+        # print(i)
+        # sleep(5)
+        if (i !=num) and ((num%i) != 0):
+            if i == temp-1:
+                print(f'{num} is a prime number')
+
+        elif i == num:
+            pass
+
+        else:
+            print(f'{num} is not a prime number')
+            break
+
+num = int(input('Enter the number: '))
+
+output = prime(num)
+
+
+
+
+#For a list of numbers
+# def prime(num):
+#
+#     s = 0
+#     temp = 10_00_000
+#
+#     for j in num:
+#         for i in range(2,temp):
+#             # print(i)
+#             # sleep(5)
+#             if (i !=j) and ((j%i) != 0):
+#                 if i == temp-1:
+#                     print(f'{j} is a prime number')
+#
+#             elif i == j:
+#                 pass
+#
+#             else:
+#                 print(f'{j} is not a prime number')
+#                 break
+#
+# num = [3,4,7,11,13,23]
+#
+# output = prime(num)
+
+
